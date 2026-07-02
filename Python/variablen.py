@@ -16,7 +16,6 @@ haus = "Villa"
 
 print(name[0:6], len(obst), len(haus))
 
-#strip() entfernt die Leerzeichen am Anfang und Ende des Strings
 print(name.strip())
 
 print(name.replace("ard", "affe"))
@@ -38,3 +37,13 @@ skills = ['Python', 'Java', 'C++', 'JavaScript']
 
 for skill in skills:
     print('Ich kann', skill)
+
+
+zahlen = [1, 2, 3, 4, 5]
+
+zahlen.append(6)
+print(zahlen)
+
+test = (1, 2, 3, 4, 5, 6, 76, 98, 10, 11)
+
+print(test[4])
