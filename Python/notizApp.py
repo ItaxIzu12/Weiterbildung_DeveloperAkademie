@@ -20,6 +20,7 @@ def delete_note():
 def update_note():
     notes[0]["test"] = "Ich habe heute Milch, Eier gekauft"
 
+
 add_note()
 delete_note()
 update_note()
