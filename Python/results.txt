@@ -1,0 +1,19 @@
+Datei erfolgreich gelesen!
+
+Text: Aktuell mache ich eine Weiterbidung zum Softwareentwickler - Schwerpunkt Backend Backend.
+
+Character count: 90
+Word count: 11
+Sentence count: 1
+Average word length: 7.18
+
+--- Top 10 Words ---
+1. backend         2x
+2. aktuell         1x
+3. mache           1x
+4. ich             1x
+5. eine            1x
+6. weiterbidung    1x
+7. zum             1x
+8. softwareentwickler 1x
+9. schwerpunkt     1x

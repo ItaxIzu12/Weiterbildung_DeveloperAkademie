@@ -14,7 +14,7 @@ def add_note():
 
 
 def delete_note():
-    notes.pop(1)  # Löscht die erste Notiz in der Liste
+    notes.pop(1)
 
 
 def update_note():
