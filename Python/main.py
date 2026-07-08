@@ -71,15 +71,21 @@ class TextAnalyzer:
         return result
 
 if __name__ == "__main__":
-    file_path = "C:\\Users\\richa\\Desktop\\Weiterbildung_DeveloperAkademie\\Python\\developerAkademie.txt"
-    results_file = "C:\\Users\\richa\\Desktop\\Weiterbildung_DeveloperAkademie\\Python\\results.txt"
+    inputText = input("Bitte geben Sie den Text ein, der analysiert werden soll: ")
+    inserText = input("In welcher Datei möchten sie den Text speichern? (z.B. developerAkademie): ")
+    saveText = input("Wie soll die Datei heissen, in der die Ergebnisse gespeichert werden sollen? (z.B. results): ")
+    file_path = f"{inserText}.txt"
+    results_file = f"{saveText}.txt"
 
     try:
-        print(f"Versuche zu öffnen: {file_path}")
+        print(f"Versuche zu schreiben der Datei: {file_path}")
+        with open(file_path, 'w') as file:
+            file.write(inputText)
         
+        print(f"Versuche zu öffnen: {file_path}")
         with open(file_path, 'r') as file:
             text_content = file.read()
-            
+        
         # Ergebnisse alle in einer Variable sammeln
         output = ""
         output += "Datei erfolgreich gelesen!\n\n"
