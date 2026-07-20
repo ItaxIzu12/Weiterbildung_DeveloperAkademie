@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="review">
+        <form class="content" [formGroup]="review">
+            <h1 class="text-center mb-4">Bewertung</h1>
+
+            <div class="field">
+                <label for="firstName" class="form-label">Vorname</label>
+                <input type="text" id="firstName" class="form-control" placeholder="Vorname eingeben" formControlName="firstName"/>
+            </div>
+
+            <div class="field">
+                <label for="lastName" class="form-label">Nachname</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Nachname eingeben" formControlName="lastName"/>
+            </div>
+
+            <div class="field">
+                <label for="message" class="form-label">Nachricht</label>
+                <textarea id="message" class="form-control" rows="4" placeholder="Deine Bewertung eingeben" formControlName="message"></textarea>
+            </div>
+
+            <div class="button-action">
+                <button class="btn btn-outline-danger me-3" type="button">Abbrechen</button>
+                <button class="btn btn-outline-primary" type="button" (click)="onSubmit()">Absenden</button>
+            </div>
+
+            <p class="status mt-3">{{ status() }}</p>
+        </form>
+    </div>
+</div>
