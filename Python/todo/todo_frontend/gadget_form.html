@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./todo_frontend.css">
+    <title>Gadget hinzufügen</title>
+</head>
+<body onload="loadGadgets()">
+    <div class="main">
+        <h1>Neues Gadget</h1>
+        <div class="field">
+            <label for="name">Name:</label>
+            <input class="text" id="name" placeholder="z.B. SmartWatch X">
+        </div>
+
+        <div class="field">
+            <label for="category">Kategorie:</label>
+            <input class="text" id="category" placeholder="z.B. Wearable Technology">
+        </div>
+
+        <div class="field">
+            <label for="manufacturer">Hersteller:</label>
+            <input class="text" id="manufacturer" placeholder="z.B. FitTrack Inc.">
+        </div>
+
+        <div class="field">
+            <label for="price">Preis:</label>
+            <input class="text" id="price" placeholder="z.B. 99.99">
+        </div>
+
+        <div class="field">
+            <label for="description">Beschreibung:</label>
+            <textarea class="text" id="description" placeholder="Beschreibung eintragen"></textarea>
+        </div>
+
+        <div class="action-button">
+            <button class="button" type="button" onclick="addGadget()">Gadget senden</button>
+        </div>
+    </div>
+
+    <div>
+        <p class="status"></p>
+        <ul class="gadgetListe"></ul>
+    </div>
+</body>
+</html>
+
+<script language="javascript" type="text/javascript" src="./gadget_form.js"></script>
