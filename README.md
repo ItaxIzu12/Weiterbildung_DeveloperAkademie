@@ -3,25 +3,25 @@
 1. Open terminal
 2. Create and activate virtual environment (one-time):
 
-   python -m venv env ->
-   .venv/Scripts/activate  # Windows
-    or source .venv/bin/activate  # macOS/Linux
+   'python -m venv env' ->
+   '.venv/Scripts/activate'  # Windows
+    or 'source .venv/bin/activate'  # macOS/Linux
 
 3. Install dependencies:
    
-   pip install -r requirements.txt
-   pip freeze  # Check that everything was installed
-   pip freeze > requirements.txt  # Save dependencies
+   'pip install -r requirements.txt' ->
+   'pip freeze'  # Check that everything was installed ->
+   'pip freeze > requirements.txt'  # Save dependencies
 
 4. Create database:
    
-   python manage.py migrate 
+   'python manage.py migrate' 
 
    Database has been created (db.sqlite3)
    
 5. Start server:
    
-   python manage.py runserver
+   'python manage.py runserver'
    
    The server then runs at 'http://127.0.0.1:8000'.
 
@@ -37,5 +37,5 @@
    - Rename the copy to `src/environments/environment.ts`
    - Adjust `apiUrl` in it if needed, in case it's a different URL
 5. Start server:
-   ng serve
+   'ng serve'
    The server then runs at 'localhost:4200'
