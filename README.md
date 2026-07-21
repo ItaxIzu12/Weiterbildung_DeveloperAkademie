@@ -27,13 +27,13 @@
 
 ## Set up frontend (Angular)
 1. Open new terminal
-2. Change into the `review_frontend` folder. ('cd review' then press Tab key)
+2. Change into the `review_frontend` folder. (Press `cd review` then press Tab key)
 3. Install dependencies:
    
    npm install
 
 4. Rename local environment file:
-   - Copy `src/environments/environment.example.ts`
+   - Go to `src/environments/environment.example.ts`
    - Rename the copy to `src/environments/environment.ts`
    - Adjust `apiUrl` in it if needed, in case it's a different URL
 5. Start server:
