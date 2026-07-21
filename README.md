@@ -3,9 +3,9 @@
 1. Open terminal
 2. Create and activate virtual environment (one-time):
 
-   python -m venv env
+   python -m venv env ->
    .venv/Scripts/activate  # Windows
-   source .venv/bin/activate  # macOS/Linux
+    or source .venv/bin/activate  # macOS/Linux
 
 3. Install dependencies:
    
