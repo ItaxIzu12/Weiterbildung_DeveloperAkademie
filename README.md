@@ -1,4 +1,6 @@
 # Weiterbildung_DeveloperAkademie
 
-Test
- vcxvxvx
+## Backend (Django) einrichten
+
+1. Datenbank erzeugen: python manage.py migrate
+2. Server starten: python manage.py runserver

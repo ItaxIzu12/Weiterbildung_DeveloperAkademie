@@ -29,6 +29,9 @@ yarn-error.log
 !.vscode/mcp.json
 .history/*
 
+# enviroment.ts darf nicht gepusht werden
+src/environments/environment.ts
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/

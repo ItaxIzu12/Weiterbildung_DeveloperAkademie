@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 interface Review {
   firstName: string;
@@ -12,7 +13,7 @@ interface Review {
   providedIn: 'root'
 })
 export class ReviewService {
-  private readonly apiUrl = 'http://localhost:8000/chat/';
+  private readonly apiUrl = `${environment.apiUrl}/chat/`;
 
   constructor(private readonly httpClient: HttpClient) {}
 
