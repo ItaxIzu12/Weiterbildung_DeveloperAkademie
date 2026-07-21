@@ -1,6 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { ReviewService } from '../service/reviewService';
+import { ReviewService, Review } from '../service/reviewService';
 
 @Component({
   selector: 'reviewComponent',
@@ -8,10 +8,11 @@ import { ReviewService } from '../service/reviewService';
   templateUrl: './review.component.html',
   styleUrl: './review.component.scss'
 })
-export class ReviewComponent {
+export class ReviewComponent implements OnInit {
   review: FormGroup
   fb: FormBuilder = new FormBuilder;
   status = signal('');
+  reviews = signal<Review[]>([]);
 
   constructor(private readonly reviewService: ReviewService) {
     this.review = this.fb.group({
@@ -21,12 +22,33 @@ export class ReviewComponent {
     })
   }
 
+  ngOnInit() {
+    this.loadReviews();
+  }
+
+  loadReviews() {
+    this.reviewService.getReviews().subscribe({
+      next: (reviews) => {
+        this.reviews.set(reviews);
+      },
+      error: () => {
+        this.status.set('Bewertungen konnten nicht geladen werden.');
+      }
+    });
+  }
+
   onSubmit() {
-    console.log(this.review.value)
+    if (this.review.invalid) {
+      this.review.markAllAsTouched();
+      this.status.set('Bitte alle Felder ausfüllen.');
+      return;
+    }
+
     this.reviewService.sendReview(this.review.value).subscribe({
       next: () => {
         this.status.set('Bewertung gesendet!');
         this.review.reset();
+        this.loadReviews();
       },
       error: () => {
         this.status.set('Fehler beim Senden.');

@@ -9,9 +9,8 @@
 
 3. Install dependencies:
    
-   `pip install -r requirements.txt` ->
-   `pip freeze`  # Check that everything was installed ->
-   `pip freeze > requirements.txt`  # Save dependencies
+   `pip install -r django_backend/requirements.txt` ->
+   `pip freeze`  # Check that everything was installed
 
 4. Create database:
    

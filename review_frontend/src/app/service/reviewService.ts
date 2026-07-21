@@ -3,10 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-interface Review {
+export interface Review {
+  id?: number;
   firstName: string;
   lastName: string;
   message: string;
+  created_at?: string;
 }
 
 @Injectable({
